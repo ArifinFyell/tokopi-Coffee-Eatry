@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="TOKOPI — Katalog menu digital premium. Temukan pilihan makanan dan minuman eksklusif kami.">
+  <title>TOKOPI — Menu Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-badge">Coffee & Eatry</div>
+      <h1 class="hero-title">TOKOPI</h1>
+      <p class="hero-desc">Pilihan makanan &amp; minuman premium untuk setiap momen terbaik Anda</p>
+      <a href="#menu" class="hero-cta">Lihat Menu <span>↓</span></a>
+    </div>
+  </header>
+
+  <!-- ===== STICKY NAV ===== -->
+  <nav class="sticky-nav" id="stickyNav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">TOKOPI</a>
+      <div class="nav-tabs">
+        <button class="nav-tab active" data-cat="all" onclick="filterMenu('all',this)">Semua</button>
+        <button class="nav-tab" data-cat="makanan" onclick="filterMenu('makanan',this)">Food</button>
+        <button class="nav-tab" data-cat="minuman" onclick="filterMenu('minuman',this)">Drink</button>
+      </div>
+      <div class="nav-count" id="navCount">53 Item</div>
+    </div>
+  </nav>
+
+  <!-- ===== MENU SECTION ===== -->
+  <main class="menu-section" id="menu">
+    <div class="section-header">
+      <span class="section-label">Menu Kami</span>
+      <h2 class="section-title">PILIHAN TERBAIK</h2>
+      <p class="section-desc">Dibuat dengan bahan-bahan pilihan berkualitas tinggi</p>
+    </div>
+
+    <!-- MAKANAN -->
+    <div class="category-block" id="cat-makanan">
+      <div class="category-header">
+        <div class="cat-line"></div>
+        <h3 class="cat-title"><span class="cat-icon">🍽️</span> Makanan</h3>
+        <div class="cat-count">28 item</div>
+      </div>
+      <div class="menu-grid" id="grid-makanan"></div>
+    </div>
+
+    <!-- MINUMAN -->
+    <div class="category-block" id="cat-minuman">
+      <div class="category-header">
+        <div class="cat-line"></div>
+        <h3 class="cat-title"><span class="cat-icon">🥤</span> Minuman</h3>
+        <div class="cat-count">25 item</div>
+      </div>
+      <div class="menu-grid" id="grid-minuman"></div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">TOKOPI</span>
+        <p>Katalog Menu Digital Premium</p>
+      </div>
+      <div class="footer-info">
+        <p>📍 Jl. Jendral Sudirman Ujung</p>
+        <p>📞 +62 812 3456 7890</p>
+        <p>🕐 09.00 – 23.00 WIB</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 TOKOPI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL OVERLAY ===== -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+    <div class="modal" id="modalContent"></div>
+  </div>
+
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
